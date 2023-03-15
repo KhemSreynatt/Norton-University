@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CustomCardUser extends StatelessWidget {
   const CustomCardUser({super.key});
@@ -11,9 +12,10 @@ class CustomCardUser extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(0xffC7A631),
+        color: Color(0xffBD8518),
       ),
       child: Row(
+        // mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             height: 75,
@@ -26,78 +28,92 @@ class CustomCardUser extends StatelessWidget {
           SizedBox(
             width: 15,
           ),
-          Column(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                "KHEM Sreynat",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text(
-                "ES1 grade | B20210332",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              SizedBox(
-                height: 4,
-              ),
-              Text(
-                "Major: Software Developmet",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              SizedBox(
-                height: 4,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "KHEM Sreynat",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    "ES1 grade | B20210332",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    "Major: Software Developmet",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        height: 20,
+                        width: 46,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Center(
+                            child: Text(
+                          "in",
+                          style: TextStyle(color: Colors.white),
+                        )),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        height: 20,
+                        width: 46,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Center(
+                            child: Text(
+                          "out",
+                          style: TextStyle(color: Colors.orange),
+                        )),
+                      ),
+                    ],
+                  )
+                ],
               ),
               Row(
                 children: [
-                  Container(
-                    height: 20,
-                    width: 46,
-                    decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Center(
-                        child: Text(
-                      "in",
-                      style: TextStyle(color: Colors.white),
-                    )),
-                  ),
                   SizedBox(
-                    width: 10,
+                    height: 40,
                   ),
-                  Container(
-                    height: 20,
-                    width: 46,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Center(
-                        child: Text(
-                      "out",
-                      style: TextStyle(color: Colors.orange),
-                    )),
-                  ),
+                  SvgPicture.asset("assets/svg/user-plus.svg"),
+                  SvgPicture.asset("assets/svg/download.svg"),
                 ],
               )
             ],
-          )
+          ),
         ],
       ),
     );
