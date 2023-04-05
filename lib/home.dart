@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:norton_university/src/group/group.dart';
-import 'package:norton_university/src/map/map.dart';
+import 'package:norton_university/src/module/group/group.dart';
+import 'package:norton_university/src/module/map/map.dart';
 import 'package:norton_university/src/module/home/screen/home_page.dart';
 import 'package:norton_university/src/profile/profile.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -4,8 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomService extends StatelessWidget {
-  const CustomService(
-      {super.key, this.image, this.index, this.select, this.title, this.ontap});
+  const CustomService({
+    super.key,
+    this.image,
+    this.index,
+    this.select,
+    this.title,
+    this.ontap,
+  });
   final String? title;
   final String? image;
   final int? index;
@@ -46,9 +52,15 @@ class CustomService extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 2,
+          height: 8,
         ),
-        Text("$title")
+        Text(
+          "$title",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+          ),
+        )
       ],
     );
   }
